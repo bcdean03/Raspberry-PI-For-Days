@@ -13,7 +13,7 @@ sock.send("Abel Dean Josh Ben John Shelley Jalen"
           "Abel Dean Josh Ben John Shelley Jalen Abel Dean "
           "Josh Ben John Shelley Jalen Abel Dean"
           "Josh Ben John Shelley Jalen Abel Abel"
-          "Dean Josh Ben John Shelley Jalen")
+          "Dean Josh Ben John Shelley Jalen Howdy Partner")
 
 
 sock.close()
