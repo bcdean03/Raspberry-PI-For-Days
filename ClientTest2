@@ -1,0 +1,27 @@
+#https://people.csail.mit.edu/albert/bluez-intro/c212.html
+import sys
+import bluetooth
+
+uuid = "1e0ca4ea-299d-4335-93eb-27fcfe7fa848"
+service_matches = bluetooth.find_service( uuid = uuid )
+
+if len(service_matches) == 0:
+    print "couldn't find the Abean service"
+    sys.exit(0)
+
+first_match = service_matches[0]
+port = first_match["port"]
+name = first_match["name"]
+host = first_match["host"]
+
+sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+sock.connect((host, port))
+
+sock.send("Abel Dean Josh Ben John Shelley Jalen"
+          "Abel Dean Josh Ben John Shelley Jalen Abel Dean "
+          "Josh Ben John Shelley Jalen Abel Dean"
+          "Josh Ben John Shelley Jalen Abel Abel"
+          "Dean Josh Ben John Shelley Jalen")
+
+
+sock.close()

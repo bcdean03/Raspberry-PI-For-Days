@@ -1,6 +1,9 @@
 #https://people.csail.mit.edu/albert/bluez-intro/c212.html
 
 import bluetooth
+import os
+
+os.system("sudo hciconfig hci0 piscan")
 
 server_sock=bluetooth.BluetoothSocket( bluetooth.RFCOMM )
 
